@@ -15,6 +15,7 @@ public class CityServlet {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response get() throws Exception {
+		// BEGIN Comment to demo DB service
 		JsonObject city = new JsonObject();
 		city.addProperty("name", "Bialystok");
 		city.addProperty("latitude", 53.1325);
@@ -22,6 +23,11 @@ public class CityServlet {
 
 		JsonArray cities = new JsonArray();
 		cities.add(city);
+		// END Comment to demo DB service
+
+		// BEGIN Unomment to demo DB service
+		// JsonArray cities = new DatabaseManager().getCities();
+		// END Unomment to demo DB service
 
 		String responseBody = cities.toString();
 		return Response.ok(responseBody).build();
