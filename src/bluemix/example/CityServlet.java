@@ -27,6 +27,7 @@ public class CityServlet {
 
 		// BEGIN Unomment to demo DB service
 		// JsonArray cities = new DatabaseManager().getCities();
+		// Remember to update credentials in DatabaseManager!
 		// END Unomment to demo DB service
 
 		String responseBody = cities.toString();
