@@ -1,8 +1,7 @@
 applications:
-- path: MapMarkers.war
+- path: googlemapsdb.war
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: map-markers
-  host: map-markers
+  name: googlemapsdb
   disk_quota: 1024M
